@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "Hash": "jRGRTXBjiTRkz/6U9jfiozvtHNhhMqmAoRIFg79DdVM=",
+  "Source": "SharpBarberAPI",
+  "BasePath": "_content/SharpBarberAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SharpBarberAPI/wwwroot",
+      "Source": "SharpBarberAPI",
+      "ContentRoot": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/",
+      "BasePath": "_content/SharpBarberAPI",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/4or0ynn9je-nmyo2jrrhf.gz",
+      "SourceId": "SharpBarberAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/",
+      "BasePath": "_content/SharpBarberAPI",
+      "RelativePath": "index#[.{fingerprint=nmyo2jrrhf}]?.html.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/index.html",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "et0t6i7ake",
+      "Integrity": "YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/index.html"
+    },
+    {
+      "Identity": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/index.html",
+      "SourceId": "SharpBarberAPI",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/",
+      "BasePath": "_content/SharpBarberAPI",
+      "RelativePath": "index#[.{fingerprint}]?.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "nmyo2jrrhf",
+      "Integrity": "T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/index.html"
+    }
+  ],
+  "Endpoints": [
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/4or0ynn9je-nmyo2jrrhf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004255319149"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "234"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA="
+        }
+      ]
+    },
+    {
+      "Route": "index.html",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA="
+        }
+      ]
+    },
+    {
+      "Route": "index.html.gz",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/4or0ynn9je-nmyo2jrrhf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "234"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA="
+        }
+      ]
+    },
+    {
+      "Route": "index.nmyo2jrrhf.html",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/4or0ynn9je-nmyo2jrrhf.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.004255319149"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "234"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nmyo2jrrhf"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA="
+        }
+      ]
+    },
+    {
+      "Route": "index.nmyo2jrrhf.html",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/wwwroot/index.html",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "326"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nmyo2jrrhf"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-T6MDDs4hCLJZh2MZTqNZEAWD8RyC3ub19N2P5Cka4SA="
+        }
+      ]
+    },
+    {
+      "Route": "index.nmyo2jrrhf.html.gz",
+      "AssetFile": "/Users/nobody1/programming/sharp-barber/SharpBarberAPI/obj/Debug/net9.0/compressed/4or0ynn9je-nmyo2jrrhf.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "234"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/html"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 06 Feb 2025 15:47:42 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "nmyo2jrrhf"
+        },
+        {
+          "Name": "label",
+          "Value": "index.html.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-YudRQeS+TukilWY8ms4H0yoTYTlEgSIVgR0Fj9/0eeA="
+        }
+      ]
+    }
+  ]
+}

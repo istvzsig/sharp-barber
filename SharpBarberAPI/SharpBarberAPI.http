@@ -1,0 +1,6 @@
+@SharpBarberAPI_HostAddress = http://localhost:5193
+
+GET {{SharpBarberAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
