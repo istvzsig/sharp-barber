@@ -1,29 +1,12 @@
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddRazorPages();
-
-// Register CORS services
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policy =>
-    {
-        policy.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader(); // Adjust as needed
-    });
-});
 
 var app = builder.Build();
 
-List<Appointment> appointments = new();
+List<Appointment> appointments = [];
 
-app.UseCors();
+// app.UseCors();
 
 app.MapGet("/api/appointments", () => Results.Ok(appointments));
 
