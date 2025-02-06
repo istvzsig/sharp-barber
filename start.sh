@@ -2,4 +2,9 @@
 
 cd SharpBarberAPI
 dotnet build
-dotnet run
+dotnet run &
+
+cd ..
+
+cd SharpBarberUI
+ng serve
