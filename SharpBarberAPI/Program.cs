@@ -23,10 +23,7 @@ var app = builder.Build();
 
 List<Appointment> appointments = new();
 
-app.UseStaticFiles();
 app.UseCors();
-
-app.MapGet("/", () => Results.File("index.html", "text/html"));
 
 app.MapGet("/api/appointments", () => Results.Ok(appointments));
 
