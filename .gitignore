@@ -1,0 +1,24 @@
+# Ignore build and output files
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+*.log
+
+# Ignore user-specific and IDE files
+.vscode/
+.idea/
+*.user
+*.suo
+*.vs
+*.sln.cache
+*.sln.ide
+
+# Ignore environment variables and secrets
+.env
+appsettings.json
+appsettings.Development.json
+
+# Ignore dependencies (if using NuGet)
+packages/
