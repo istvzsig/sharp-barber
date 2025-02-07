@@ -22,3 +22,7 @@ appsettings.Development.json
 
 # Ignore dependencies (if using NuGet)
 packages/
+
+# Ignore .db files
+*.db
+.DS_Store
