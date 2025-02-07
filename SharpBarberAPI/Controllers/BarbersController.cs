@@ -10,15 +10,9 @@ namespace SharpBarberAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BarbersController : ControllerBase
+    public class BarbersController(AppDbContext context) : ControllerBase
     {
-        private readonly AppDbContext _context;
-
-        // Constructor Injection for AppDbContext
-        public BarbersController(AppDbContext context)
-        {
-            _context = context;
-        }
+        private readonly AppDbContext _context = context;
 
         // POST: api/barbers
         [HttpPost]
