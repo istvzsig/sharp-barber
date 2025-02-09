@@ -4,7 +4,7 @@
         <label for="username">Your Nickname</label>
         <input type="text" id="username" [(ngModel)]="username" name="username" required>
     </div>
-    <app-barber-selector [barbers]="barbers" />
+    <app-barber-selector [barbers]="barbers" (selectedBarber)="onBarberSelected($event)"></app-barber-selector>
     <div>
         <label for="appointment-time">Appointment Time:</label>
         <input type="datetime-local" id="appointment-time" [(ngModel)]="appointmentTime" name="appointmentTime"

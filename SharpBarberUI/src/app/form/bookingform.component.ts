@@ -12,13 +12,19 @@ import { Barber } from '../models/barber.model';
 export class BookingFormComponent {
   username: string = '';
   appointmentTime: string = '';
+  selectedBarber: Barber | null = null;
 
   @Input() barbers: Barber[] = [];
+
+  onBarberSelected(barber: Barber) {
+    this.selectedBarber = barber;
+  }
 
   onSubmit() {
     console.log('Booking:', {
       username: this.username,
-      appointmentTime: this.appointmentTime
+      appointmentTime: this.appointmentTime,
+      selectedBarber: this.selectedBarber,
     });
   }
 }
