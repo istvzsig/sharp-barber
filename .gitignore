@@ -27,3 +27,5 @@ packages/
 *.db
 .DS_Store
 Migrations/
+*db-shm
+*db-wal
