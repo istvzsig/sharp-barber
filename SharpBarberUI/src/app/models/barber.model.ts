@@ -1,5 +1,5 @@
 export interface Barber {
-    id: string
+    id: number
     name: string
     imgUrl: string
 }
