@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { BookingFormComponent } from "./form/bookingform.component";
-import { FormsModule } from '@angular/forms';
 import { BarberService } from '../../services/barber.service';
 import { Barber } from '../../models/barber.model';
 
