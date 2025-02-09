@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { VideoBackgroundComponent } from '../../video-background/video-background.component';
-import { ScissorsComponent } from '../../scissors/scissors.component';
+import { VideoBackgroundComponent } from '../../components/video-background/video-background.component';
+import { ScissorsComponent } from '../../components/scissors/scissors.component';
 
 @Component({
   selector: 'app-home',
