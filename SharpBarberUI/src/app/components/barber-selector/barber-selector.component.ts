@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Barber } from '../../models/barber.model';
 
 
@@ -11,4 +11,9 @@ import { Barber } from '../../models/barber.model';
 })
 export class BarberSelectorComponent {
   @Input() barbers: Barber[] = [];
+  @Output() selectedBarber = new EventEmitter<Barber>();
+
+  toggleSelected(barber: Barber) {
+    this.selectedBarber.emit(barber);
+  }
 }

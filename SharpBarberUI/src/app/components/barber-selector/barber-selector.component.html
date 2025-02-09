@@ -1,10 +1,8 @@
-<h1>Select Your Barber</h1>
 <div id="barber-selection">
-    <div *ngFor="let barber of barbers" class="barber-option" [attr.data-barber-id]="barber">
-        <ul>
-            <p>{{ barber.id }}</p>
-            <p>{{ barber.name }}</p>
-            <img src="{{barber.imgUrl}}" alt="">
-        </ul>
+    <div *ngFor="let barber of barbers" class="barber-option" [attr.data-barber-id]="barber.id"
+        (click)="toggleSelected(barber)">
+        <p>{{ barber.id }}</p>
+        <p>{{ barber.name }}</p>
+        <div class="barber-profile" style="background-image: url({{barber.imgUrl}});"></div>
     </div>
 </div>
