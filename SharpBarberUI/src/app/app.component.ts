@@ -1,32 +1,17 @@
+import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { HeaderComponent } from "./header/header.component";
+import { BarbersService } from './service/barber.service';
+
 @Component({
   selector: 'app-root',
-  imports: [],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
+  imports: [CommonModule, RouterOutlet, HeaderComponent],
 })
 export class AppComponent {
   title = 'SharpBarberUI';
-  barbers: any[] = [];
-
-  constructor(private http: HttpClient) { }
-
-  ngOnInit(): void {
-    this.getBarbers();
-  }
-
-  getBarbers(): void {
-    this.http.get<any[]>('http://localhost:5193/api/barbers').subscribe(
-      (data) => {
-        this.barbers = data;
-        console.log(this.barbers);
-      },
-      (error) => {
-        console.error('Error fetching barbers', error);
-      }
-    );
-  }
 }
