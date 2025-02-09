@@ -26,3 +26,4 @@ packages/
 # Ignore .db files
 *.db
 .DS_Store
+Migrations/
