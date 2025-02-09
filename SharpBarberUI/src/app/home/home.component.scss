@@ -1,0 +1,44 @@
+div.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: "Frank Ruhl Libre", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    h1 {
+        font-size: 7vw;
+        color: ivory;
+        text-align: center;
+        letter-spacing: 5px;
+        font-style: italic;
+    }
+
+    h4 {
+        font-size: 4vw;
+        font-family: "Montserrat", sans-serif;
+        color: ivory;
+        text-align: center;
+    }
+
+    .cta-container {
+        display: grid;
+        grid: auto / auto;
+        justify-content: center;
+        padding: 2rem 0;
+
+        * {
+            text-decoration: none;
+            font-size: 6vw;
+            text-align: center;
+            margin: 0 auto;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        *:not(img, p) {
+            padding: 1rem 4rem;
+            box-shadow: inset 1px 1px 0 #E6BE8A, inset -1px -1px 0 #E6BE8A;
+        }
+    }
+}
