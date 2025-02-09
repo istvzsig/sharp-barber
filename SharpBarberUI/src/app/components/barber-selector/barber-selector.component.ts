@@ -4,6 +4,7 @@ import { Component, Input } from '@angular/core';
 interface Barber {
   id: string
   name: string
+  imageUrl: string
 }
 
 @Component({
