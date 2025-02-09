@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { BookingFormComponent } from "./form/bookingform.component";
 import { FormsModule } from '@angular/forms';
-import { BarberService } from '../../service/barber.service';
+import { BarberService } from '../../services/barber.service';
+import { Barber } from '../../models/barber.model';
 
 @Component({
   selector: 'app-bookins',
@@ -10,11 +11,14 @@ import { BarberService } from '../../service/barber.service';
   imports: [BookingFormComponent]
 })
 export class BookingsComponent {
-  barbers: any = [];
+  barbers: Barber[] = [];
 
   constructor(private barberService: BarberService) { }
 
   ngOnInit() {
-    this.barbers = this.barberService.getBarbers();
+    this.barberService.getBarbers().subscribe({
+      next: (data) => this.barbers = data,
+      error: (err) => console.error('Failed to load barbers:', err)
+    });
   }
 }
