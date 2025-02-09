@@ -10,18 +10,30 @@ namespace SharpBarberAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class BarbersController(AppDbContext context) : ControllerBase
+    public class BarbersController : ControllerBase
     {
-        private readonly AppDbContext _context = context;
+        private readonly AppDbContext _context;
+
+        public BarbersController(AppDbContext context)
+        {
+            _context = context;
+        }
 
         // POST: api/barbers
         [HttpPost]
-        public async Task<ActionResult<Barber>> CreateBarber([FromBody] Barber barber)
+        public async Task<ActionResult<Barber>> CreateBarber([FromBody] BarberDTO barberDTO)
         {
-            if (barber == null)
+            if (barberDTO == null)
             {
                 return BadRequest("Invalid barber data.");
             }
+
+            var barber = new Barber
+            {
+                Name = barberDTO.Name,
+                AvailableHours = barberDTO.AvailableHours ?? new List<string>(), // Default empty list if null
+                Services = barberDTO.Services ?? new List<string>() // Default empty list if null
+            };
 
             _context.Barbers.Add(barber);
             await _context.SaveChangesAsync();
@@ -51,12 +63,22 @@ namespace SharpBarberAPI.Controllers
 
         // PUT: api/barbers/{id}
         [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateBarber(int id, [FromBody] Barber barber)
+        public async Task<IActionResult> UpdateBarber(int id, [FromBody] BarberDTO barberDTO)
         {
-            if (id != barber.Id)
+            if (id != barberDTO.Id)
             {
                 return BadRequest("Barber ID mismatch.");
             }
+
+            var barber = await _context.Barbers.FindAsync(id);
+            if (barber == null)
+            {
+                return NotFound(new { message = "Barber not found." });
+            }
+
+            barber.Name = barberDTO.Name;
+            barber.AvailableHours = barberDTO.AvailableHours ?? barber.AvailableHours;
+            barber.Services = barberDTO.Services ?? barber.Services;
 
             _context.Entry(barber).State = EntityState.Modified;
 
