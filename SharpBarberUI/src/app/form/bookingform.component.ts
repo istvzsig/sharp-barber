@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { BarberSelectorComponent } from "../../../components/barber-selector/barber-selector.component";
-import { Barber } from '../../../models/barber.model';
+import { BarberSelectorComponent } from '../components/barber-selector/barber-selector.component';
+import { Barber } from '../models/barber.model';
 
 @Component({
   selector: 'app-bookingform',

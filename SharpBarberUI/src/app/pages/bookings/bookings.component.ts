@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import { BookingFormComponent } from "./form/bookingform.component";
 import { BarberService } from '../../services/barber.service';
 import { Barber } from '../../models/barber.model';
+import { BookingFormComponent } from '../../form/bookingform.component';
 
 @Component({
   selector: 'app-bookins',
