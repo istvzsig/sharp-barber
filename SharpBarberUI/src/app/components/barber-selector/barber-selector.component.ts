@@ -1,11 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
+import { Barber } from '../../models/barber.model';
 
-interface Barber {
-  id: string
-  name: string
-  imageUrl: string
-}
 
 @Component({
   selector: 'app-barber-selector',
