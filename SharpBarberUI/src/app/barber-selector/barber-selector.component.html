@@ -1,0 +1,8 @@
+<h1>Select Your Barber</h1>
+<div id="barber-selection">
+    <div *ngFor="let barber of barbers" class="barber-option" [attr.data-barber-id]="barber">
+        <ul>
+            <p>{{ barber.name }}</p>
+        </ul>
+    </div>
+</div>
