@@ -1,5 +1,6 @@
 <form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" id="booking-form" novalidate>
     <div>
+        <input type="text" name="honeypot" style="display: none;" autocomplete="off">
         <label for="username">Your Nickname</label>
         <input type="text" id="username" formControlName="username" required autocomplete="off">
         <div *ngIf="bookingForm.get('username')?.invalid && bookingForm.get('username')?.touched">
