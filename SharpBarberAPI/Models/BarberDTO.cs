@@ -4,7 +4,7 @@ namespace SharpBarberAPI.Models
 {
     public class BarberDTO
     {
-        public int Id { get; set; }  // Add this property
+        public int Id { get; set; }
 
         [Required]
         public string Name { get; set; } = string.Empty;
