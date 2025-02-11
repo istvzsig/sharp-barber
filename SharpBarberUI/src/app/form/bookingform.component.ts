@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { BarberSelectorComponent } from '../components/barber-selector/barber-selector.component';
 import { Barber } from '../models/barber.model';
 import { CommonModule } from '@angular/common';
@@ -18,8 +18,16 @@ export class BookingFormComponent {
 
   constructor(private fb: FormBuilder) {
     this.bookingForm = this.fb.group({
-      username: ['', [Validators.required, Validators.minLength(3), Validators.maxLength(13)]],
-      appointmentTime: ['', [Validators.required]],
+      username: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(3),
+          Validators.maxLength(13),
+          Validators.pattern('^[a-zA-Z0-9_-]*$')
+        ]
+      ],
+      appointmentTime: ['', [Validators.required, futureDateValidator]],
       selectedBarber: [null, [Validators.required]]
     })
   }
@@ -36,4 +44,10 @@ export class BookingFormComponent {
       console.error('Form is invalid');
     }
   }
+}
+
+function futureDateValidator(control: FormControl) {
+  const selectedDate = new Date(control.value);
+  const now = new Date();
+  return selectedDate > now ? null : { pastDate: true };
 }
