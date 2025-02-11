@@ -1,15 +1,21 @@
-<!-- <p>Booking form works!</p> -->
-<form (submit)="onSubmit()" id="booking-form">
+<form [formGroup]="bookingForm" (ngSubmit)="onSubmit()" id="booking-form">
     <div>
         <label for="username">Your Nickname</label>
-        <input type="text" id="username" [(ngModel)]="username" name="username" required>
-    </div>
-    <app-barber-selector [barbers]="barbers" (selectedBarber)="onBarberSelected($event)"></app-barber-selector>
-    <div>
-        <label for="appointment-time">Appointment Time:</label>
-        <input type="datetime-local" id="appointment-time" [(ngModel)]="appointmentTime" name="appointmentTime"
-            required>
+        <input type="text" id="username" formControlName="username" required autocomplete="off">
+        <div *ngIf="bookingForm.get('username')?.invalid && bookingForm.get('username')?.touched">
+            <small class="error">Nickname is required (3-20 characters).</small>
+        </div>
     </div>
 
-    <button type="submit">Book Now</button>
+    <app-barber-selector [barbers]="barbers" (selectedBarber)="onBarberSelected($event)"></app-barber-selector>
+
+    <div>
+        <label for="appointment-time">Appointment Time:</label>
+        <input type="datetime-local" id="appointment-time" formControlName="appointmentTime" required>
+        <div *ngIf="bookingForm.get('appointmentTime')?.invalid && bookingForm.get('appointmentTime')?.touched">
+            <small class="error">Please select a valid time.</small>
+        </div>
+    </div>
+
+    <button type="submit" [disabled]="bookingForm.invalid">Book Now</button>
 </form>
