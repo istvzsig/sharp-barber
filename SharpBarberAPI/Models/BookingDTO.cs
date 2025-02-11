@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace SharpBarberAPI.Models
 {
-    public class Booking
+    public class BookingDTO
     {
         public int Id { get; set; }
 
