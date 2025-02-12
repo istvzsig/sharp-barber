@@ -4,17 +4,29 @@
         <label for="username">Your Nickname</label>
         <input type="text" id="username" formControlName="username" required autocomplete="off">
         <div *ngIf="bookingForm.get('username')?.invalid && bookingForm.get('username')?.touched">
-            <small class="error">Nickname is required (3-20 characters).</small>
+            <small class="error" *ngIf="bookingForm.get('username')?.hasError('required')">
+                Nickname is required (3-20 characters).
+            </small>
+            <small class="error" *ngIf="bookingForm.get('username')?.hasError('minlength')">
+                Nickname must be at least 3 characters.
+            </small>
+            <small class="error" *ngIf="bookingForm.get('username')?.hasError('maxlength')">
+                Nickname cannot exceed 13 characters.
+            </small>
+            <small class="error" *ngIf="bookingForm.get('username')?.hasError('pattern')">
+                Nickname can only contain letters, numbers, underscores, and hyphens.
+            </small>
         </div>
     </div>
 
+    <h3>Select your barber:</h3>
     <app-barber-selector [barbers]="barbers" (selectedBarber)="onBarberSelected($event)"></app-barber-selector>
 
     <div>
         <label for="appointment-time">Appointment Time:</label>
         <input type="datetime-local" id="appointment-time" formControlName="appointmentTime" required>
         <div *ngIf="bookingForm.get('appointmentTime')?.invalid && bookingForm.get('appointmentTime')?.touched">
-            <small class="error">Please select a valid time.</small>
+            <small class="error">We cannot go back in time. Please select from future.</small>
         </div>
     </div>
 

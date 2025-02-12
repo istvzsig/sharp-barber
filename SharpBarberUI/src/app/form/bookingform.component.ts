@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { AbstractControl, FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, ValidationErrors, ValidatorFn, Validators } from '@angular/forms';
 import { BarberSelectorComponent } from '../components/barber-selector/barber-selector.component';
 import { Barber } from '../models/barber.model';
 import { CommonModule } from '@angular/common';
@@ -11,13 +11,13 @@ import { CommonModule } from '@angular/common';
   styleUrl: './bookingform.component.scss'
 })
 export class BookingFormComponent {
+  @Input() barbers: Barber[] = [];
+
   bookingForm: FormGroup;
   selectedBarber: Barber | null = null;
 
-  @Input() barbers: Barber[] = [];
-
-  constructor(private fb: FormBuilder) {
-    this.bookingForm = this.fb.group({
+  constructor(private formBuilder: FormBuilder) {
+    this.bookingForm = this.formBuilder.group({
       username: [
         '',
         [
@@ -28,26 +28,31 @@ export class BookingFormComponent {
         ]
       ],
       appointmentTime: ['', [Validators.required, futureDateValidator]],
-      selectedBarber: [null, [Validators.required]]
+      barberId: [null, [notNullValidator()]]
     })
   }
 
   onBarberSelected(barber: Barber) {
-    this.selectedBarber = barber;
-    this.bookingForm.patchValue({ selectedBarber: barber });
+    this.selectedBarber = this.selectedBarber !== barber ? barber : null;
+    this.bookingForm.patchValue({ barberId: this.selectedBarber?.id || null });
   }
 
   onSubmit() {
-    if (this.bookingForm.valid) {
-      console.log('Booking:', this.bookingForm.value);
-    } else {
-      console.error('Form is invalid');
-    }
+    // TODO: Add additional validation and error handling
+    console.log('Booking:', this.bookingForm.value);
   }
 }
 
-function futureDateValidator(control: FormControl) {
+export function futureDateValidator(control: FormControl): Object | null {
   const selectedDate = new Date(control.value);
   const now = new Date();
   return selectedDate > now ? null : { pastDate: true };
+}
+
+export function notNullValidator(): ValidatorFn {
+  return (control: AbstractControl): ValidationErrors | null => {
+    return control.value !== null && control.value !== undefined
+      ? null
+      : { notNull: true };
+  };
 }
