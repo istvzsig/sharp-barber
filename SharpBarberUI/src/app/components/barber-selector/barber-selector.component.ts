@@ -13,7 +13,10 @@ export class BarberSelectorComponent {
   @Input() barbers: Barber[] = [];
   @Output() selectedBarber = new EventEmitter<Barber>();
 
+  selectedBarberId: number | null = null;
+
   toggleSelected(barber: Barber) {
+    this.selectedBarberId = this.selectedBarberId === barber.id ? null : barber.id;
     this.selectedBarber.emit(barber);
   }
 }

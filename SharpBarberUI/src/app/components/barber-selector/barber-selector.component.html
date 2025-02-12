@@ -1,6 +1,7 @@
 <div id="barber-selection">
     <div *ngFor="let barber of barbers" class="barber-option" [attr.data-barber-id]="barber.id"
-        (click)="toggleSelected(barber)">
+        [attr.data-selected]="selectedBarberId === barber.id ? true : null" (click)="toggleSelected(barber)"
+        [style.opacity]="selectedBarberId === null || selectedBarberId === barber.id ? 1 : 0.5">
         <p>{{ barber.id }}</p>
         <p>{{ barber.name }}</p>
         <div class="barber-profile" style="background-image: url({{barber.imgUrl}});"></div>
